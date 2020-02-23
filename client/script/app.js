@@ -78,6 +78,9 @@ function getData(){
             "date": $("#inpDate").val()
         };
         $data = JSON.stringify($data);
+        $("#inpName").val("");
+        $("#inpLastName").val("");
+        $("#inpDate").val("");
         sentData($data);
     } else{
         $("#mainMsg").fadeIn(1000);
