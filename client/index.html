@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="utility/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="utility/ionicons/css/ionicons.min.css">
+        <title>Prueba CRUD</title>
+        <link rel="icon" type="image/gif" href="utility/icons/circle1.gif"/>
+        <!--Styles-->
+        <link rel="stylesheet" href="style/base.css">
+	</head>
+	<body>
+
+        <div class="container w-50 alert-primary space-div-content">
+            <form>
+                <div class="form-group row">
+                    <label for="inpName" class=" col-form-label col-sm-2 mr-2 ml-3 pl-2">Nombre:</label>    
+                    <div class="col-sm-9">
+                        <input id="inpName" class="form-control col-auto" type="text" placeholder="Ej: Nazira">
+                        <small id="inpNameMsg" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inpLastName" class=" col-form-label col-sm-2 mr-2 ml-3 pl-2">Apellido:</label>    
+                    <div class="col-sm-9">
+                        <input id="inpLastName" class="form-control col-auto" type="text" placeholder="Ej: Espinoza">
+                        <small id="inpLastNameMsg" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inpDate" class=" col-form-label col-sm-2 mr-2 ml-3 pl-2">Fecha:</label>    
+                    <div class="col-sm-9">
+                        <input id="inpDate" class="form-control col-auto" type="date">
+                        <small id="inpDateMsg" class="form-text text-muted"></small>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                    <div class="row w-50 justify-content-between">
+                        <button id="btnClean" type="button" class="btn btn-danger">Limpiar</button>
+                        <button id="btnSave" type="button" class="btn btn-success">Guardar</button>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                    <small id="mainMsg" class="center-text text-danger"></small> 
+                </div>                          
+            </form>           
+        </div>
+
+        <div class="container space-line w-75">
+            <div class="row justify-content-end">
+                <button id="btnMostrar" type="button" class="btn btn-primary">
+                    <i class="ion-eye-disabled"></i>
+                    Ocultar Tabla
+                </button>
+            </div>
+        </div>
+
+        <div class="container">
+            <table id="table1" class="table table-hover table-sm space-table"></table>
+        </div>
+
+        <!--Modal-->
+        <div id="editModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editModalTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="editModalTitle" class="modal-title">Modificar Datos Del Cliente</h5>
+                        <button id="editModalClose" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="modalInpName" class=" col-form-label col-sm-2 mr-2 ml-3 pl-2">Nombre:</label>    
+                                <div class="col-sm-9">
+                                    <input id="modalInpName" class="form-control col-auto" type="text" placeholder="Ej: Nazira">
+                                    <small id="modalInpNameMsg" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="modalInpLastName" class=" col-form-label col-sm-2 mr-2 ml-3 pl-2">Apellido:</label>    
+                                <div class="col-sm-9">
+                                    <input id="modalInpLastName" class="form-control col-auto" type="text" placeholder="Ej: Espinoza">
+                                    <small id="modalInpLastNameMsg" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="modalInpDate" class=" col-form-label col-sm-2 mr-2 ml-3 pl-2">Fecha:</label>    
+                                <div class="col-sm-9">
+                                    <input id="modalInpDate" class="form-control col-auto" type="date">
+                                    <small id="modalInpDateMsg" class="form-text text-muted"></small>
+                                </div>
+                            </div>
+                            <input id="modalInpID" type="hidden"> 
+                            <div class="form-group row justify-content-center">
+                                <small id="modalMainMsg" class="center-text text-danger"></small> 
+                            </div>                          
+                        </form>  
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnModalClose" type="button" class="btn btn-danger mr-3" data-dismiss="modal">Cancelar</button>
+                        <button id="btnModalSaveChanges" type="button" class="btn btn-success" data-dismiss="modal" disabled>Guardar Cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+          
+        <!--Bootstrap-->
+        <script src= "utility/jquery.min.js"></script> 
+        <script src= "utility/popper.min.js"></script>
+        <script src= "utility/bootstrap/js/bootstrap.min.js"></script>
+        <!--App Scripts-->
+        <script src= "script/app.js"></script>
+	</body>
+
+</html>
